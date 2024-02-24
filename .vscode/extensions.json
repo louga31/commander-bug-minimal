@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"roblox-ts.vscode-roblox-ts",
+		"dbaeumer.vscode-eslint",
+		"flamework.flamework-vscode",
+		"ms-vscode.vscode-typescript-next",
+		"YoavBls.pretty-ts-errors",
+		"evaera.vscode-rojo",
+		"tacheometrist.testez-companion"
+	]
+}

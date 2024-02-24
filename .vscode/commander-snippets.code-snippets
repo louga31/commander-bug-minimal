@@ -1,0 +1,38 @@
+{
+// import { Command, CommandInteraction, Commander } from "@rbxts/commander";
+// @Commander()
+// export class KickCommand {
+// 	@Command({
+// 		name: "kick",
+// 		description: "",
+// 		arguments: [
+// 			
+// 		],
+// 	})
+// 	kick(interaction: CommandInteraction) {
+// 	}
+// }
+
+	"Commander Commande": {
+		"prefix": ["command"],
+		"description": "Create a Commander command",
+		"body": [
+			"import { Command, CommandInteraction, Commander } from \"@rbxts/commander\";",
+			"",
+			"@Commander()",
+			"export class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}Command {",
+			"\t@Command({",
+			"\t\tname: \"${TM_FILENAME_BASE/(.*)/${1:/downcase}/g}\",",
+			"\t\tdescription: \"$2\",",
+			"\t\targuments: [",
+			"\t\t\t$3",
+			"\t\t],",
+			"\t})",
+			"\t${TM_FILENAME_BASE/(.*)/${1:/downcase}/g}(interaction: CommandInteraction) {",
+			"\t\t$0",
+			"\t}",
+			"}",
+		],
+	}
+
+}
